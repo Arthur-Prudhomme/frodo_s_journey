@@ -7,6 +7,28 @@
     border: 0;
 }
 
+body {
+    background-color: black;
+}
+
+@font-face {
+    font-family: "RingBearer";
+    src: url(../fonts/RingbearerMedium-51mgZ.ttf);
+}
+
+.title {
+    font-family: "RingBearer";
+    font-size: 46px;
+    color: #C07317;
+    position: absolute;
+    top: 0;
+    padding-top: 15vh;
+    z-index: 0;
+    text-decoration: underline;
+    text-shadow: 2px 0 #ffffff9c, -2px 0 #ffffff9c, 0 2px #ffffff9c, 0 -2px #ffffff9c,
+        1px 1px #ffffff9c, -1px -1px #ffffff9c, 1px -1px #ffffff9c, -1px 1px #ffffff9c;
+}
+
 .loader {
     height: 100vh;
     width: 100vw;
@@ -44,6 +66,7 @@
 
     #overlay {
         object-fit: fill;
+        z-index: 1;
     }
 }
 
@@ -56,6 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 
     img {
         position: relative;
