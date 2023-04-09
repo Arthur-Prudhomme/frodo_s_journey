@@ -71,7 +71,7 @@ function resetMordor() {
 }
 
 ScrollTrigger.create({
-    trigger: "#character_the_shire",
+    trigger: "#the_shire",
     start: "top bottom",
     end: "center top",
     onEnter: playShire,
@@ -86,7 +86,7 @@ ScrollTrigger.create({
     onEnter: playRivendell,
     onLeave: resetRivendell,
     onEnterBack: playRivendell,
-    onLeaveBack: playRivendell
+    onLeaveBack: resetRivendell
 });
 ScrollTrigger.create({
     trigger: "#character_moria",
