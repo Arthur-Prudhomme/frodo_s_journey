@@ -31,7 +31,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 
     img {
         position: absolute;
@@ -53,13 +53,18 @@
 }
 
 .characters {
-    height: 40vh;
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    align-content: center;
 
     img {
+        position: relative;
+        max-height: 300px;
         height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 }
