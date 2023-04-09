@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 
     img {
         width: 20%;
@@ -49,4 +50,16 @@
 .fondu-out {
     opacity: 0;
     transition: opacity 0.4s ease-out;
+}
+
+.characters {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    img {
+        height: 100%;
+    }
 }
