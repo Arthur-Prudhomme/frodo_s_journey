@@ -1,8 +1,147 @@
 const loader = document.querySelector('.loader');
+let shireTheme = new Audio("./musics/Very_Old_Friends.mp3")
+let rivendellTheme = new Audio("./musics/Rivendell.mp3")
+let moriaTheme = new Audio("./musics/Moria.mp3")
+let lorienTheme = new Audio("./musics/The_Mirror_of_Galadriel.mp3")
+let raurosTheme = new Audio("./musics/The_Departure_of_Boromir.mp3")
+let morgulTheme = new Audio("./musics/Minas_Morgul.mp3")
+let shelobTheme = new Audio("./musics/Shelob_s_Lair.mp3")
+let mordorTheme = new Audio("./musics/Mount_Doom.mp3")
 
 window.addEventListener('load', () => {
     loader.classList.add('fondu-out');
 })
+
+function playShire() {
+    shireTheme.play()
+}
+function playRivendell() {
+    rivendellTheme.play()
+}
+function playMoria() {
+    moriaTheme.play()
+}
+function playLorien() {
+    lorienTheme.play()
+}
+function playRauros() {
+    raurosTheme.play()
+}
+function playMorgul() {
+    morgulTheme.play()
+}
+function playShelob() {
+    shelobTheme.play()
+}
+function playMordor() {
+    mordorTheme.play()
+}
+
+function resetShire() {
+    shireTheme.pause();
+    shireTheme.currentTime = 0;
+}
+function resetRivendell() {
+    rivendellTheme.pause();
+    rivendellTheme.currentTime = 0;
+}
+function resetMoria() {
+    moriaTheme.pause();
+    moriaTheme.currentTime = 0;
+}
+function resetLorien() {
+    lorienTheme.pause();
+    lorienTheme.currentTime = 0;
+}
+function resetRauros() {
+    raurosTheme.pause();
+    raurosTheme.currentTime = 0;
+}
+function resetMorgul() {
+    morgulTheme.pause();
+    morgulTheme.currentTime = 0;
+}
+function resetShelob() {
+    shelobTheme.pause();
+    shelobTheme.currentTime = 0;
+}
+function resetMordor() {
+    mordorTheme.pause();
+    mordorTheme.currentTime = 0;
+}
+
+ScrollTrigger.create({
+    trigger: "#character_the_shire",
+    start: "top bottom",
+    end: "center top",
+    onEnter: playShire,
+    onLeave: resetShire,
+    onEnterBack: playShire,
+    onLeaveBack: resetShire
+});
+ScrollTrigger.create({
+    trigger: "#character_rivendell",
+    start: "top bottom",
+    end: "center top",
+    onEnter: playRivendell,
+    onLeave: resetRivendell,
+    onEnterBack: playRivendell,
+    onLeaveBack: playRivendell
+});
+ScrollTrigger.create({
+    trigger: "#character_moria",
+    start: "top bottom",
+    end: "center top",
+    onEnter: playMoria,
+    onLeave: resetMoria,
+    onEnterBack: playMoria,
+    onLeaveBack: resetMoria
+});
+ScrollTrigger.create({
+    trigger: "#character_lorien",
+    start: "top bottom",
+    end: "center top",
+    onEnter: playLorien,
+    onLeave: resetLorien,
+    onEnterBack: playLorien,
+    onLeaveBack: resetLorien
+});
+ScrollTrigger.create({
+    trigger: "#character_rauros_falls",
+    start: "top bottom",
+    end: "center top",
+    onEnter: playRauros,
+    onLeave: resetRauros,
+    onEnterBack: playRauros,
+    onLeaveBack: resetRauros
+});
+ScrollTrigger.create({
+    trigger: "#character_minas_morgul",
+    start: "top bottom",
+    end: "center top",
+    onEnter: playMorgul,
+    onLeave: resetMorgul,
+    onEnterBack: playMorgul,
+    onLeaveBack: resetMorgul
+});
+ScrollTrigger.create({
+    trigger: "#character_shelob_s_lair",
+    start: "top bottom",
+    end: "center top",
+    onEnter: playShelob,
+    onLeave: resetShelob,
+    onEnterBack: playShelob,
+    onLeaveBack: resetShelob
+});
+ScrollTrigger.create({
+    trigger: "#character_mordor",
+    start: "top bottom",
+    end: "center top",
+    onEnter: playMordor,
+    onLeave: resetMordor,
+    onEnterBack: playMordor,
+    onLeaveBack: resetMordor
+});
 
 let shire = gsap.timeline({
     scrollTrigger: {
